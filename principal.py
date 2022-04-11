@@ -41,7 +41,7 @@ def solucion():
                 j = int(split[1])/100
 
                 if not(i == 0 and j == 0):
-                    if not(i < 0 or j < 0):
+                    if not((i < 0 or j < 0) or (i > 10000 or j*100 > 1000)):
                         solucion = (-j/2) + ((i**2)/(8*j))
                         salida = salida + str(i) + "\t\t\t " + str(j) + "\t\t\t\t\t " + str(round(solucion, 1)) + "\n"
                     else:
